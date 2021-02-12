@@ -8,5 +8,7 @@ window.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem("products", JSON.stringify(data));
   }
   
-  fetchData();
+  if (localStorage.getItem("products") == null) {
+    fetchData();
+  }
 });
