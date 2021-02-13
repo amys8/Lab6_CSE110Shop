@@ -9,7 +9,7 @@ class ProductItem extends HTMLElement {
         <img src="" alt="" width=200>
         <p class="title"></p>
         <p class="price"></p>
-        <button onclick="alert('Added to Cart!')">Add to Cart</button>
+        <button id="" onclick="alert('Added to Cart!')">Add to Cart</button>
       </li>
       <style> 
         .price {
