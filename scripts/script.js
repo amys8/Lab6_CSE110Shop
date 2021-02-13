@@ -22,7 +22,9 @@ window.addEventListener('DOMContentLoaded', () => {
     node.shadowRoot.querySelector("button").id = i.id;
     node.shadowRoot.querySelector("button").addEventListener("click", buttonFunc);
     if (i.id in localStorage) {
-      node.shadowRoot.querySelector("button").buttonFunc();
+      node.shadowRoot.querySelector("button").innerHTML = 'Remove from Cart'; 
+      node.shadowRoot.querySelector("button").onclick = function() {alert('Removed from Cart!');};
+      document.getElementById("cart-count").innerHTML = parseInt(document.getElementById("cart-count").innerHTML)+1;
     }
     document.getElementById("product-list").appendChild(node);
   }
