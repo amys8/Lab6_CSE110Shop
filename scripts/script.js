@@ -27,12 +27,12 @@ window.addEventListener('DOMContentLoaded', () => {
 function buttonFunc() {
   if (this.innerHTML === 'Add to Cart') {
     this.innerHTML = 'Remove from Cart';
-    this.onclick = function() {alert('Added to Cart!');};
+    this.onclick = function() {alert('Removed from Cart!');};
     document.getElementById("cart-count").innerHTML = parseInt(document.getElementById("cart-count").innerHTML)+1;
   }   
   else {
     this.innerHTML = 'Add to Cart'; 
-    this.onclick = function() {alert('Removed from Cart!');};
+    this.onclick = function() {alert('Added to Cart!');};
     document.getElementById("cart-count").innerHTML = parseInt(document.getElementById("cart-count").innerHTML)-1;
   } 
 }
