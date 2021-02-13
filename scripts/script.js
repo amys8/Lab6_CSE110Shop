@@ -19,20 +19,19 @@ window.addEventListener('DOMContentLoaded', () => {
     node.shadowRoot.querySelector("img").src = i.image;
     node.shadowRoot.querySelector(".title").innerHTML = i.title; 
     node.shadowRoot.querySelector(".price").innerHTML = "$" + i.price;
+    node.shadowRoot.querySelector("button").addEventListener("click", buttonFunc);
     document.getElementById("product-list").appendChild(node);
   }
 });
 
-document.getElementsByTagName("button").addEventListener("click", buttonFunc);
-
-function buttonFunc() {
-  if (but.innerHTML === 'Add to Cart') {
-    but.innerHTML = 'Remove from Cart';
-    document.getElementById("cart-count").innerHTML = parseInt(document.getElementById("cart-count").innerHTML)+1;
-  }   
-  else {
-    but.innerHTML = 'Add to Cart';
-    document.getElementById("cart-count").innerHTML = parseInt(document.getElementById("cart-count").innerHTML)-1;
+  function buttonFunc() {
+    if (but.innerHTML === 'Add to Cart') {
+      but.innerHTML = 'Remove from Cart';
+      document.getElementById("cart-count").innerHTML = parseInt(document.getElementById("cart-count").innerHTML)+1;
+    }   
+    else {
+      but.innerHTML = 'Add to Cart';
+      document.getElementById("cart-count").innerHTML = parseInt(document.getElementById("cart-count").innerHTML)-1;
+    }
   }
-}
     
