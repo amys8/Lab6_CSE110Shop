@@ -31,7 +31,7 @@ function buttonFunc() {
   if (but.innerHTML === 'Add to Cart') {
     but.innerHTML = 'Remove from Cart';
     document.getElementById("cart-count").innerHTML = parseInt(document.getElementById("cart-count").innerHTML)+1;
-  }
+  }   
   else {
     but.innerHTML = 'Add to Cart';
     document.getElementById("cart-count").innerHTML = parseInt(document.getElementById("cart-count").innerHTML)-1;
