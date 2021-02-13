@@ -23,8 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-let x = document.getElementsByTagName("product-item");
-let but = x.shadowRoot.getElementsByTagName("button");
+let but = document.getElementsByTagName("button");
 but.addEventListener("click", buttonFunc);
 
 function buttonFunc() {
