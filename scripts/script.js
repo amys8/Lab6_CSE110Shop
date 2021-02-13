@@ -23,8 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-let but = document.getElementsByTagName("button");
-but.addEventListener("click", buttonFunc);
+document.getElementsByTagName("button").addEventListener("click", buttonFunc);
 
 function buttonFunc() {
   if (but.innerHTML === 'Add to Cart') {
