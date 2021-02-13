@@ -24,14 +24,16 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-  function buttonFunc() {
-    if (this.innerHTML === 'Add to Cart') {
-      this.innerHTML = 'Remove from Cart';
-      document.getElementById("cart-count").innerHTML = parseInt(document.getElementById("cart-count").innerHTML)+1;
-    }   
-    else {
-      this.innerHTML = 'Add to Cart';
-      document.getElementById("cart-count").innerHTML = parseInt(document.getElementById("cart-count").innerHTML)-1;
-    }
-  }
+function buttonFunc() {
+  if (this.innerHTML === 'Add to Cart') {
+    this.innerHTML = 'Remove from Cart';
+    this.onclick = "alert('Added to Cart!')";
+    document.getElementById("cart-count").innerHTML = parseInt(document.getElementById("cart-count").innerHTML)+1;
+  }   
+  else {
+    this.innerHTML = 'Add to Cart'; 
+    this.onclick = "alert('Removed from Cart!')";
+    document.getElementById("cart-count").innerHTML = parseInt(document.getElementById("cart-count").innerHTML)-1;
+  } 
+}
     
